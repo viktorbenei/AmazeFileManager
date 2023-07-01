@@ -83,6 +83,7 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -584,6 +585,14 @@ public class FileUtils {
                   break;
               }
               try {
+               for (ResolveInfo resolveInfo : activity.getPackageManager()
+                        .queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY))
+                  activity.grantUriPermission(
+                          resolveInfo.activityInfo.packageName,
+                          uri,
+                          Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION
+                  );
+
                 if (intent != null) {
                   activity.startActivity(intent);
                 } else {
