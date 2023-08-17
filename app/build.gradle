@@ -4,6 +4,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-parcelize'
 apply plugin: 'com.hiya.jacoco-android'
 apply plugin: "com.starter.easylauncher"
+apply plugin: 'org.gradle.android.cache-fix'
 
 android {
     compileSdkVersion 31
