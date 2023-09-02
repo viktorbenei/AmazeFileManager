@@ -112,6 +112,7 @@ class PreferencesActivity : ThemedActivity(), FolderChooserDialog.FolderCallback
 
     /**
      * Push a new fragment into the stack
+     * .
      */
     fun pushFragment(fragment: BasePrefsFragment) {
         supportFragmentManager.commit {
