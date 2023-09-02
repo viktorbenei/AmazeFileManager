@@ -22,6 +22,7 @@ package com.amaze.filemanager.fileoperations.filesystem
 
 import androidx.annotation.IntDef
 
+
 const val DOESNT_EXIST = 0
 const val WRITABLE_OR_ON_SDCARD = 1
 
